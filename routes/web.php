@@ -27,7 +27,19 @@ Route::get('/', [ProdutosController::class, 'index']);
 //     dd($request->all());
 //     // return view('Site.Sistema.make');
 // });
+
+// Rota para Sistema Make Perfum
+// Route::get('/make-perfum', function (Request $request) {
+//     Produto::create([
+//         'nome_perfume' => $request->nome_perfume,
+//         'agua' => $request->agua,
+//         'alcool' => $request->alcool,
+//         'fragrancia_ml' => $request->fragrancia_ml,
+//         'nome_fragrancia' => $request->nome_fragrancia
+//     ]);
+// });
 Route::get('/make-perfum', [ProdutosController::class, 'store']);
+
 
 
 // Rota para Sistema Relatórios
