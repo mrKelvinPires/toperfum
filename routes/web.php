@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProdutosController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,31 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Rota para Página Home
-// Route::get('/', function() { 
-//     return view('Site.Home.index'); 
-// });
-// Route::get('/', [ComponentesController::class, 'index']);
+Route::get('/', [ProdutosController::class, 'index']);
 
-// Rota para Sistema de Relatórios
-// Route::get('/relatorios', function() {  
-//     return view('Site.Sistema.relatorios'); 
-// });
-// Route::get('/relatorios', [ComponentesController::class, 'relatorios']);
-
-// // Rotas para métodos de criação - cadastro dos perfumes - CRUD
-// Route::post('/create', [ComponentesController::class, 'store']
-// dd($request->all());
-// );
-
-Route::post('/create', function(Request $request) { 
-    return view('Site.Sistema.create'); 
+// Rota para Sistema Make Perfum
+// Route::get('/make-perfum', [ProdutosController::class, 'make']);
+Route::post('/make-perfum', function (RequestEvent $request) {
     dd($request->all());
+    // return view('Site.Sistema.make');
 });
+
+// Rota para Sistema Relatórios
+Route::get('/relatorios', [ProdutosController::class, 'relatorios']);
+
+
 
  
