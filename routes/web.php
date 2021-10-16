@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProdutosController;
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\HttpKernel\Event\RequestEvent;
+use App\Http\Controllers\ProdutosController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ Route::get('/', [ProdutosController::class, 'index']);
 
 // Rota para Sistema Make Perfum
 // Route::get('/make-perfum', [ProdutosController::class, 'make']);
-Route::post('/make-perfum', function (RequestEvent $request) {
+Route::post('/make-perfum', function (Request $request) {
     dd($request->all());
     // return view('Site.Sistema.make');
 });
