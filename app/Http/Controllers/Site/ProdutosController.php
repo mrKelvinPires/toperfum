@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProdutoRequest;
+use App\Models\Produto;
 use Illuminate\Http\Request;
 
 class ProdutosController extends Controller
@@ -15,11 +17,6 @@ class ProdutosController extends Controller
     public function index()
     {
         return view('Site.Home.index');
-    }
-
-    public function make()
-    {
-        return view('Site.Sistema.make');
     }
 
     public function relatorios()
@@ -43,9 +40,13 @@ class ProdutosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    // public function store(ProdutoRequest $request)
     public function store(Request $request)
     {
-        //
+        return view('Site.Sistema.make');
+        // $produto = $request->all();
+        // $criarProduto = Produto::create($produto);
+        // return redirect()->back()->with('mensagem', 'Registro criado com sucesso!');
     }
 
     /**

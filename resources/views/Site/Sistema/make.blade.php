@@ -44,8 +44,7 @@
         </nav>
 
         <div class="container pt-5">
-        <!-- <form action="/create" method="POST" enctype="multipart/form-data"> -->
-            <form action="/create" method="POST">
+        <form action="/make-perfum" method="POST" enctype="multipart/form-data">
 
             <!-- Token de proteção de Sessão Laravel -->
             @csrf
@@ -57,17 +56,17 @@
 
                 <div class="form-group">
                     <label for="agua">Quantidade de Água: </label>
-                    <input type="number" name="agua" placeholder="Água em ml" class="form-control">
+                    <input type="text" name="agua" placeholder="Água em ml" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="alcool">Quantidade de Álcool: </label>
-                    <input type="number" name="alcool" placeholder="Álcool em ml" class="form-control">
+                    <input type="text" name="alcool" placeholder="Álcool em ml" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="fragrancia_ml">Fragrância: </label>
-                    <input type="number" name="fragrancia_ml" placeholder="Fragrância em ml" class="form-control">
+                    <input type="text" name="fragrancia_ml" placeholder="Fragrância em ml" class="form-control">
                 </div>
 
                 <div class="form-group">
@@ -75,7 +74,8 @@
                     <input type="text" name="nome_fragrancia" placeholder="Nome da fragrância" class="form-control">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button class="btn btn-primary">Salvar</button>
+                <!-- <button type="submit" class="btn btn-primary">Salvar</button> -->
 
             </form>
         </div>

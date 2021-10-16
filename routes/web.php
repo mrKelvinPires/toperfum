@@ -23,11 +23,12 @@ use Illuminate\Http\Request;
 Route::get('/', [ProdutosController::class, 'index']);
 
 // Rota para Sistema Make Perfum
-// Route::get('/make-perfum', [ProdutosController::class, 'make']);
-Route::post('/make-perfum', function (Request $request) {
-    dd($request->all());
-    // return view('Site.Sistema.make');
-});
+// Route::post('/make-perfum', function (Request $request) {
+//     dd($request->all());
+//     // return view('Site.Sistema.make');
+// });
+Route::get('/make-perfum', [ProdutosController::class, 'store']);
+
 
 // Rota para Sistema Relatórios
 Route::get('/relatorios', [ProdutosController::class, 'relatorios']);

@@ -14,7 +14,7 @@
                 font-family: 'Nunito', sans-serif;
             }
 
-            img {
+            img, nav {
                 border-radius: 1rem;
             }
         </style>
@@ -44,39 +44,23 @@
         </nav>
 
         <div class="container pt-5">
-            <form action="/" method="GET" enctype="multipart/form-data">
+            <nav class="navbar navbar-light bg-light justify-content-center">
+                <a class="navbar-brand">
+                    <img src="logo.jpg" width="250" height="250" alt="">
+                </a>
+            </nav><br>
 
-            <!-- Token de proteção de Sessão Laravel -->
-            @csrf
+            <nav class="navbar navbar-light bg-light justify-content-center">
+                <a class="navbar-brand">
+                    <img src="logo.jpg" width="250" height="250" alt="">
+                </a>
+            </nav><br>
 
-                <div class="form-group">
-                    <label for="nome_perfume">Nome do Perfume: </label>
-                    <input type="text" name="nome_perfume" placeholder="Nome do perfume" class="form-control">
-                </div>
-
-                <div class="form-group">
-                    <label for="agua">Quantidade de Água: </label>
-                    <input type="number" name="agua" placeholder="Água em ml" class="form-control">
-                </div>
-
-                <div class="form-group">
-                    <label for="alcool">Quantidade de Álcool: </label>
-                    <input type="number" name="alcool" placeholder="Álcool em ml" class="form-control">
-                </div>
-
-                <div class="form-group">
-                    <label for="fragrancia_ml">Fragrância: </label>
-                    <input type="number" name="fragrancia_ml" placeholder="Fragrância em ml" class="form-control">
-                </div>
-
-                <div class="form-group">
-                    <label for="nome_fragrancia">Nome da Fragrância: </label>
-                    <input type="text" name="nome_fragrancia" placeholder="Nome da fragrância" class="form-control">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Salvar</button>
-
-            </form>
+            <nav class="navbar navbar-light bg-light justify-content-center">
+                <a class="navbar-brand">
+                    <img src="logo.jpg" width="250" height="250" alt="">
+                </a>
+            </nav><br>
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -84,9 +68,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js" integrity="sha512-mVkLPLQVfOWLRlC2ZJuyX5+0XrTlbW2cyAwyqgPkLGxhoaHNSWesYMlcUjX8X+k45YB8q90s88O7sos86636NQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
-            
-            
-            
             // "id" => 12,
             // "nome_perfume" => "Gran Cara de Madeira",
             // "agua" => 55,
@@ -97,7 +78,5 @@
             // 100ml Perfume A: 70ml de água, 10ml de álcool e 20ml da fragrância X.
             // 100ml Perfume B: 75ml de água, 15ml de álcool e 10ml de fragrância Y. 
         </script>
-    
-    
     </body>
 </html>
