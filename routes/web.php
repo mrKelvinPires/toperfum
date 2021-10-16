@@ -16,3 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Rota para Página Home
+// Route::get('/', function() { 
+//     return view('Site.Home.index'); 
+// });
+// Route::get('/', [ComponentesController::class, 'index']);
+
+// Rota para Sistema de Relatórios
+// Route::get('/relatorios', function() {  
+//     return view('Site.Sistema.relatorios'); 
+// });
+// Route::get('/relatorios', [ComponentesController::class, 'relatorios']);
+
+// // Rotas para métodos de criação - cadastro dos perfumes - CRUD
+// Route::post('/create', [ComponentesController::class, 'store']
+// dd($request->all());
+// );
+
+Route::post('/create', function(Request $request) { 
+    return view('Site.Sistema.create'); 
+    dd($request->all());
+});
+
+ 
