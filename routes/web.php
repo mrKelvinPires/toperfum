@@ -2,18 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\ProdutosController;
+use App\Models\Produto;
 use Illuminate\Http\Request;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -28,8 +18,16 @@ Route::get('/', [ProdutosController::class, 'index']);
 //     // return view('Site.Sistema.make');
 // });
 
-// Rota para Sistema Make Perfum
-// Route::get('/make-perfum', function (Request $request) {
+// Rota para Formulário Make Perfum
+Route::get('/make-perfum', [ProdutosController::class, 'create']);
+
+// Rota para criar Produto no BD
+Route::post('/make-perfum', [ProdutosController::class, 'store']);
+
+Route::get('/relatorios/{id}', [ProdutosController::class, 'show']);
+
+// Rota para criar Produto no BD
+// Route::post('/make-perfum', function (Request $request) {
 //     Produto::create([
 //         'nome_perfume' => $request->nome_perfume,
 //         'agua' => $request->agua,
@@ -38,13 +36,6 @@ Route::get('/', [ProdutosController::class, 'index']);
 //         'nome_fragrancia' => $request->nome_fragrancia
 //     ]);
 // });
-Route::get('/make-perfum', [ProdutosController::class, 'store']);
-
-
 
 // Rota para Sistema Relatórios
 Route::get('/relatorios', [ProdutosController::class, 'relatorios']);
-
-
-
- 

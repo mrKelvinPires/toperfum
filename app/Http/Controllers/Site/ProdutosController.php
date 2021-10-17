@@ -31,7 +31,7 @@ class ProdutosController extends Controller
      */
     public function create()
     {
-        //
+        return view('Site.Sistema.make');
     }
 
     /**
@@ -43,10 +43,10 @@ class ProdutosController extends Controller
     // public function store(ProdutoRequest $request)
     public function store(Request $request)
     {
-        return view('Site.Sistema.make');
-        // $produto = $request->all();
-        // $criarProduto = Produto::create($produto);
-        // return redirect()->back()->with('mensagem', 'Registro criado com sucesso!');
+        // return view('Site.Sistema.make');
+        $produto = $request->all();
+        $criarProduto = Produto::create($produto);
+        return redirect()->back()->with('mensagem', 'Produto criado com sucesso!');
     }
 
     /**
@@ -57,7 +57,10 @@ class ProdutosController extends Controller
      */
     public function show($id)
     {
-        //
+        // dd(Produto::find($id));
+        $procurarProduto = Produto::find($id);
+        return view('Site.Sistema.relatorios', ['produto' => $procurarProduto]);
+        echo 'Produto encontrado!';
     }
 
     /**
