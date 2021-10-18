@@ -52,6 +52,9 @@
                     <li class="nav-item">
                         <a class="nav-link border-link" href="/ver-produto/{id}">Ver Produto</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-link" href="/editar-produto/{id}">Editar Produto</a>
+                    </li>
                 </ul>
             </div>
         </nav>

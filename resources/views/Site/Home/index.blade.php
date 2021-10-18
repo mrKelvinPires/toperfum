@@ -26,6 +26,7 @@
                 text-align: center;
                 font-weight: 700;
                 margin: 0 1rem 0 0;
+                color: red;
             }
         </style>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -48,6 +49,12 @@
                     </li> 
                     <li class="nav-item">
                         <a class="nav-link border-link" href="/make-perfum">Make Perfum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-link" href="/ver-produto/{id}">Ver Produto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-link" href="/editar-produto/{id}">Ed.Produto</a>
                     </li>
                 </ul>
             </div>

@@ -59,7 +59,7 @@ class ProdutosController extends Controller
     {
         // dd(Produto::find($id));
         $procurarProduto = Produto::find($id);
-        return view('Site.Sistema.relatorios', ['produto' => $procurarProduto]);
+        return view('Site.Sistema.ver-produto', ['produto' => $procurarProduto]);
         echo 'Produto encontrado!';
     }
 
@@ -71,7 +71,7 @@ class ProdutosController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -83,7 +83,11 @@ class ProdutosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $atualizarProduto = Produto::find($id);
+        return view('Site.Sistema.editar-produto', ['produto' => $atualizarProduto]);
+        $produto = $request->all();
+        $criarProduto = Produto::create($produto);
+        return redirect()->back()->with('mensagem', 'Produto criado com sucesso!');
     }
 
     /**

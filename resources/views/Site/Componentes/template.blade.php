@@ -49,6 +49,9 @@
                     <li class="nav-item">
                         <a class="nav-link border-link" href="/make-perfum">Make Perfum</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-link" href="/ver-produto">Ver Produto</a>
+                    </li>
                 </ul>
             </div>
         </nav>

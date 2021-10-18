@@ -50,26 +50,39 @@
                     <li class="nav-item">
                         <a class="nav-link border-link" href="/make-perfum">Make Perfum</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-link" href="/ver-produto/{id}">Ver Produto</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     
         <div class="container pt-5">
 
-                <div class="form-group">
-                    <label for="id">Id do Perfume: </label>
-                    <input type="text" value="{{$produto->id}}">
-                </div>
+            <div class="form-group">
+                <label for="nome_perfume">Nome do Perfume: </label>
+                <input type="text" name="nome_perfume" placeholder="Nome do perfume" class="form-control">
+            </div>
 
-                <div class="form-group">
-                    <label for="nome_perfume">Nome do Perfume: </label>
-                    <input type="text" value="{{$produto->nome_perfume}}">
-                </div>
+            <div class="form-group">
+                <label for="agua">Quantidade de Água: </label>
+                <input type="text" name="agua" placeholder="Água em ml" class="form-control">
+            </div>
 
-                <div class="form-group">
-                    <label for="fragrancia_ml">Fragrância: </label>
-                    <input type="text" value="{{$produto->fragrancia_ml}}">
-                </div>
+            <div class="form-group">
+                <label for="alcool">Quantidade de Álcool: </label>
+                <input type="text" name="alcool" placeholder="Álcool em ml" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="fragrancia_ml">Fragrância: </label>
+                <input type="text" name="fragrancia_ml" placeholder="Fragrância em ml" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="nome_fragrancia">Nome da Fragrância: </label>
+                <input type="text" name="nome_fragrancia" placeholder="Nome da fragrância" class="form-control">
+            </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

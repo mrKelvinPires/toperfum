@@ -12,19 +12,20 @@ use Illuminate\Http\Request;
 // Rota para Página Home
 Route::get('/', [ProdutosController::class, 'index']);
 
-// Rota para Sistema Make Perfum
-// Route::post('/make-perfum', function (Request $request) {
-//     dd($request->all());
-//     // return view('Site.Sistema.make');
-// });
-
 // Rota para Formulário Make Perfum
 Route::get('/make-perfum', [ProdutosController::class, 'create']);
 
 // Rota para criar Produto no BD
 Route::post('/make-perfum', [ProdutosController::class, 'store']);
 
-Route::get('/relatorios/{id}', [ProdutosController::class, 'show']);
+// Rota para Sistema Ver Produto
+Route::get('/ver-produto/{id}', [ProdutosController::class, 'show']);
+
+// Rota para Sistema Ver Produto
+Route::get('/editar-produto/{id}', [ProdutosController::class, 'edit']);
+
+// Rota para Sistema Relatórios
+Route::get('/relatorios', [ProdutosController::class, 'relatorios']);
 
 // Rota para criar Produto no BD
 // Route::post('/make-perfum', function (Request $request) {
@@ -37,5 +38,3 @@ Route::get('/relatorios/{id}', [ProdutosController::class, 'show']);
 //     ]);
 // });
 
-// Rota para Sistema Relatórios
-Route::get('/relatorios', [ProdutosController::class, 'relatorios']);
