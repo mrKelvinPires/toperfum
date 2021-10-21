@@ -13,4 +13,9 @@ class Produto extends Model
         'fragrancia_ml',
         'nome_fragrancia'
     ];
+
+    // Relationship / Relações 
+    public function variacoes(){
+        return $this->hasMany(VariaProduto::class, 'id_produto');
+    }
 }
