@@ -21,7 +21,7 @@
             .border-link {
                 border: 2px solid white;
                 border-radius: 1rem;
-                width: 8rem;
+                width: 8.5rem;
                 height: 3rem;
                 text-align: center;
                 font-weight: 700;
@@ -51,6 +51,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link border-link" href="/ver-produto/{id}">Ver Produto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-link" href="/editar-produto/{id}">Editar Produto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-link" href="/delete/{id}">Deletar</a>
                     </li>
                 </ul>
             </div>

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Make Perfum</title>
+        <title>Editar Produto</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
             .border-link {
                 border: 2px solid white;
                 border-radius: 1rem;
-                width: 8rem;
+                width: 8.5rem;
                 height: 3rem;
                 text-align: center;
                 font-weight: 700;
@@ -55,39 +55,42 @@
                     <li class="nav-item">
                         <a class="nav-link border-link" href="/editar-produto/{id}">Editar Produto</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-link" href="/delete/{id}">Deletar</a>
+                    </li>
                 </ul>
             </div>
         </nav>
 
         <div class="container pt-5">
-            <form action="/make-perfum" method="POST" enctype="multipart/form-data">
+            <form action="/editar-produto/{{ $produto->id }}" method="POST" enctype="multipart/form-data">
 
                 <!-- Token de proteção de Sessão Laravel -->
                 @csrf
-
+ 
                 <div class="form-group">
                     <label for="nome_perfume">Nome do Perfume: </label>
-                    <input type="text" name="nome_perfume" placeholder="Nome do perfume" class="form-control">
+                    <input type="text" name="nome_perfume" value="{{ $produto->nome_perfume }}" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="agua">Quantidade de Água: </label>
-                    <input type="text" name="agua" placeholder="Água em ml" class="form-control">
+                    <input type="text" name="agua" value="{{ $produto->agua }}" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="alcool">Quantidade de Álcool: </label>
-                    <input type="text" name="alcool" placeholder="Álcool em ml" class="form-control">
+                    <input type="text" name="alcool" value="{{ $produto->alcool }}" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="fragrancia_ml">Fragrância: </label>
-                    <input type="text" name="fragrancia_ml" placeholder="Fragrância em ml" class="form-control">
+                    <input type="text" name="fragrancia_ml" value="{{ $produto->fragrancia_ml }}" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="nome_fragrancia">Nome da Fragrância: </label>
-                    <input type="text" name="nome_fragrancia" placeholder="Nome da fragrância" class="form-control">
+                    <input type="text" name="nome_fragrancia" value="{{ $produto->nome_fragrancia }}" class="form-control">
                 </div>
 
                 <button class="btn btn-primary">Salvar</button>

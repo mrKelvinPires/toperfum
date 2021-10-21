@@ -21,7 +21,7 @@
             .border-link {
                 border: 2px solid white;
                 border-radius: 1rem;
-                width: 8rem;
+                width: 8.5rem;
                 height: 3rem;
                 text-align: center;
                 font-weight: 700;
@@ -54,7 +54,10 @@
                         <a class="nav-link border-link" href="/ver-produto/{id}">Ver Produto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border-link" href="/editar-produto/{id}">Ed.Produto</a>
+                        <a class="nav-link border-link" href="/editar-produto/{id}">Editar Produto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border-link" href="/delete/{id}">Deletar</a>
                     </li>
                 </ul>
             </div>
@@ -63,19 +66,19 @@
         <div class="container pt-5">
             <nav class="navbar navbar-light bg-light justify-content-center">
                 <a class="navbar-brand">
-                    <img src="logo.jpg" width="250" height="250" alt="">
+                    <img src="card.jpg" width="250" height="250" alt="">
                 </a>
             </nav><br>
 
             <nav class="navbar navbar-light bg-light justify-content-center">
                 <a class="navbar-brand">
-                    <img src="logo.jpg" width="250" height="250" alt="">
+                    <img src="card.jpg" width="250" height="250" alt="">
                 </a>
             </nav><br>
 
             <nav class="navbar navbar-light bg-light justify-content-center">
                 <a class="navbar-brand">
-                    <img src="logo.jpg" width="250" height="250" alt="">
+                    <img src="card.jpg" width="250" height="250" alt="">
                 </a>
             </nav><br>
         </div>

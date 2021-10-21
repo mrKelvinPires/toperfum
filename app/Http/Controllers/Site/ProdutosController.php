@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ProdutoRequest;
 use App\Models\Produto;
 use Illuminate\Http\Request;
 
@@ -34,70 +33,42 @@ class ProdutosController extends Controller
         return view('Site.Sistema.make');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    // public function store(ProdutoRequest $request)
     public function store(Request $request)
     {
-        // return view('Site.Sistema.make');
         $produto = $request->all();
         $criarProduto = Produto::create($produto);
         return redirect()->back()->with('mensagem', 'Produto criado com sucesso!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
-        // dd(Produto::find($id));
-        $procurarProduto = Produto::find($id);
+        $procurarProduto = Produto::findOrFail($id);
         return view('Site.Sistema.ver-produto', ['produto' => $procurarProduto]);
-        echo 'Produto encontrado!';
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-
+        $procurarProduto = Produto::findOrFail($id);
+        return view('Site.Sistema.editar-produto', ['produto' => $procurarProduto]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        $atualizarProduto = Produto::find($id);
-        return view('Site.Sistema.editar-produto', ['produto' => $atualizarProduto]);
-        $produto = $request->all();
-        $criarProduto = Produto::create($produto);
-        return redirect()->back()->with('mensagem', 'Produto criado com sucesso!');
+        $produto = Produto::findOrFail($id);
+        $produto->update([
+        'nome_perfume' => $request->nome_perfume,
+        'agua' => $request->agua,
+        'alcool' => $request->alcool,
+        'fragrancia_ml' => $request->fragrancia_ml,
+        'nome_fragrancia' => $request->nome_fragrancia
+        ]);
+        return redirect()->back()->with('mensagem', 'Registro atualizado com sucesso!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function deletar($id)
     {
-        //
+        $produto = Produto::findOrFail($id);
+        $produto->delete();
+        return redirect()->back()->with('mensagem', 'Deletado!');
     }
 }
