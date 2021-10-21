@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class VariaProduto extends Model
 {
     use HasFactory;
-    protected $fillable = ['id_produto', 'variacao'];
+    protected $fillable = [
+        'id_produto', 
+        'variacao'
+    ];
 
     // Relações / Relationship
 
